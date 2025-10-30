@@ -90,7 +90,10 @@
 .programa-card-premiere,
 .programa-card-afterEffects,
 .programa-card-vSCode,
-.programa-card-figma {
+.programa-card-figma,
+.programa-card-InDesign,
+.programa-card-Dreamweaver,
+.programa-card-Audition {
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
@@ -163,13 +166,31 @@
     border: 10px solid #A73413;
 }
 
+.programa-card-InDesign {
+    background: #ff3366;
+    border: 10px solid #49021f;
+}
+
+.programa-card-Dreamweaver {
+    background: #ff61f6;
+    border: 10px solid #470137;
+}
+
+.programa-card-Audition {
+    background: #9999ff;
+    border: 10px solid #00005b;
+}
+
 /* Efectos hover para todas las cards */
 .programa-card-photoshop:hover,
 .programa-card-illustrator:hover,
 .programa-card-premiere:hover,
 .programa-card-afterEffects:hover,
 .programa-card-vSCode:hover,
-.programa-card-figma:hover {
+.programa-card-figma:hover,
+.programa-card-InDesign:hover,
+.programa-card-Dreamweaver:hover,
+.programa-card-Audition:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
@@ -180,7 +201,10 @@
 .programa-card-premiere:hover .programa-logo,
 .programa-card-afterEffects:hover .programa-logo,
 .programa-card-vSCode:hover .programa-logo,
-.programa-card-figma:hover .programa-logo {
+.programa-card-figma:hover .programa-logo,
+.programa-card-InDesign:hover .programa-logo,
+.programa-card-Dreamweaver:hover .programa-logo,
+.programa-card-Audition:hover .programa-logo{
     transform: scale(1.1) rotate(5deg);
 }
 
@@ -190,7 +214,10 @@
 .programa-card-premiere::before,
 .programa-card-afterEffects::before,
 .programa-card-vSCode::before,
-.programa-card-figma::before {
+.programa-card-figma::before,
+.programa-card-InDesign:before,
+.programa-card-Dreamweaver:before,
+.programa-card-Audition:before {
     content: '';
     position: absolute;
     top: -50%;
@@ -208,7 +235,10 @@
 .programa-card-premiere:hover::before,
 .programa-card-afterEffects:hover::before,
 .programa-card-vSCode:hover::before,
-.programa-card-figma:hover::before {
+.programa-card-figma:hover::before,
+.programa-card-InDesign::before,
+.programa-card-Dreamweaver::before,
+.programa-card-Audition::before {
     opacity: 1;
 }
 
