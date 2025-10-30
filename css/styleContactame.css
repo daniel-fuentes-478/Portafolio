@@ -1,0 +1,101 @@
+@import url('style.css');
+/* Sección Contacto */
+.contacto {
+    padding: 5rem 5%;
+    padding-top: 120px;
+    background-color: var(--color-negro);
+}
+
+/* Título de sección general */
+.contacto .section-title {
+    color: var(--color-blanco);
+}
+
+.contacto .section-sub-title {
+    color: var(--color-blanco);
+}
+
+.contacto-content {
+    display: flex;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.contacto-card {
+    background: linear-gradient(135deg, var(--color-rosa) 0%, var(--color-morado) 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    color: var(--color-blanco);
+    flex: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de brillo al hover */
+.contacto-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.contacto-card:hover::before {
+    left: 100%;
+}
+
+.contacto-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(157, 45, 243, 0.5);
+}
+
+.contacto-card:active {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.contacto-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contacto-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.contacto-card p {
+    color: var(--color-blanco);
+    font-weight: 500;
+}
+
+/* Indicador visual de que es clickeable */
+.contacto-card::after {
+    content: '→';
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.contacto-card:hover::after {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+/* Responsive Contacto */
+@media (max-width: 768px) {
+    .contacto-content {
+        flex-direction: column;
+    }
+}

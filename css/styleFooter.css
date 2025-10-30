@@ -1,0 +1,41 @@
+@import url('style.css');
+/* Footer */
+.footer {
+    padding: 2rem;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Footer en páginas con fondo blanco */
+.footer.bg-white {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+}
+
+.footer.bg-white .footer-link {
+    color: var(--color-verde);
+}
+
+.footer.bg-white .footer-link:hover {
+    color: var(--color-rosa);
+}
+
+/* Footer en páginas con fondo negro */
+.footer.bg-black {
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+}
+
+.footer.bg-black .footer-link {
+    color: var(--color-morado);
+}
+
+.footer.bg-black .footer-link:hover {
+    color: var(--color-rosa);
+}
+
+.footer-link {
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: color 0.3s;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumbre - Mi Portafolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleNav.css">
+    <link rel="stylesheet" href="../css/styleFooter.css">
+    <link rel="stylesheet" href="../css/styleAlumbre.css">
+    <script src="../js/loadComponents.js"></script>
+</head>
+
+<body>
+    <div id="navbar-component"></div>
+
+    <section id="alumbre" class="alumbre">
+        <div class="alumbre-content">
+            <div class="alumbre-descripcion">
+                <h3>Proyecto: ALUMBRE</h3>
+                <p>Alumbre es mi proyecto insignia, una iniciativa creativa pensada para dar visibilidad a startups y
+                    marcas emergentes que todavía están "en la vislumbre".</p>
+
+                <h4>A través de producciones audiovisuales profesionales —fotografía comercial, videos promocionales y
+                    contenido digital—, Alumbre transforma la luz tenue en foco pleno. Es un proyecto que combina
+                    técnica, sensibilidad y propósito:
+                </h4>
+                <ul>
+                    <li>Luz: ilumina las marcas que aún no son vistas.</li>
+                    <li>Narrativa: cuenta historias auténticas que conectan.</li>
+                    <li>Curiosidad: provoca preguntas, invita a descubrir.</li>
+                    <li>Colaboración: trabaja de la mano con los emprendedores para potenciar su visión.</li>
+                </ul>
+            </div>
+
+            <h3>"Antes estaba en la vislumbre, pero Daniel me puso en foco."</h3>
+            <p>Ese es el impacto que Alumbre busca dejar en cada proyecto.</p>
+        </div>
+        <br><br>
+        <div class="galeria-grid">
+            <div class="galeria-item" data-type="image">
+                <div class="galeria-placeholder">
+                    <img src="../assets/alumbre.jpg" alt="Proyecto Alumbre" class="galeria-imagen">
+                </div>
+            </div>
+            <!-- Puedes agregar más items aquí -->
+        </div>
+    </section>
+
+    <!-- Modal para visualizar imágenes -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <div id="footer-component"></div>
+    <script src="../js/script.js"></script>
+    <script src="../js/modal.js"></script>
+</body>
+
+</html>

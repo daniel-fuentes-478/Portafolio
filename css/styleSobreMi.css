@@ -1,0 +1,238 @@
+@import url('style.css');
+/* Sección Sobre Mí */
+.sobre-mi {
+    padding: 5rem 5%;
+    padding-top: 120px;
+    background-color: var(--color-blanco);
+}
+
+.sobre-mi-content {
+    display: flex;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.foto-container {
+    flex: 1;
+}
+
+.foto-placeholder {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-rosa) 0%, var(--color-morado) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-blanco);
+    font-size: 1.2rem;
+}
+
+.info-personal {
+    flex: 2;
+}
+
+.nombre {
+    font-size: 2rem;
+    color: var(--color-negro);
+    margin-bottom: 0.5rem;
+}
+
+.profesion {
+    font-size: 1.2rem;
+    color: var(--color-morado);
+    margin-bottom: 1rem;
+}
+
+.descripcion {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.dato-curioso {
+    background-color: var(--color-verde);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.dato-curioso h4 {
+    margin-bottom: 0.5rem;
+}
+
+.habilidades, .galeria {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+
+.habilidades h3, .galeria h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-negro);
+}
+
+.programas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.logo-img-principal {
+    width: 200px; 
+    height: auto; 
+}
+
+/* Estilos mejorados para las cards de programas */
+.programa-card-photoshop,
+.programa-card-illustrator,
+.programa-card-premiere,
+.programa-card-afterEffects,
+.programa-card-vSCode,
+.programa-card-figma {
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 180px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenedor para la imagen y texto */
+.programa-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+}
+
+/* Estilos para las imágenes de los logos */
+.programa-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s;
+}
+
+/* Nombre del programa */
+.programa-nombre {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-blanco);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Colores específicos de cada programa */
+.programa-card-photoshop {
+    background-color: #31A8FF;
+    border: 10px solid #1E6FA8;
+}
+
+.programa-card-illustrator {
+    background: #FF9A00;
+    border: 10px solid #B36800;
+}
+
+.programa-card-premiere {
+    background: #9999FF;
+    border: 10px solid #5C5C9E;
+}
+
+.programa-card-afterEffects {
+    background: #D291FF;
+    border: 10px solid #8C52A5;
+}
+
+.programa-card-vSCode {
+    background: #007ACC;
+    border: 10px solid #005A91;
+}
+
+.programa-card-figma {
+    background: #F24E1E;
+    border: 10px solid #A73413;
+}
+
+/* Efectos hover para todas las cards */
+.programa-card-photoshop:hover,
+.programa-card-illustrator:hover,
+.programa-card-premiere:hover,
+.programa-card-afterEffects:hover,
+.programa-card-vSCode:hover,
+.programa-card-figma:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto en la imagen al hacer hover */
+.programa-card-photoshop:hover .programa-logo,
+.programa-card-illustrator:hover .programa-logo,
+.programa-card-premiere:hover .programa-logo,
+.programa-card-afterEffects:hover .programa-logo,
+.programa-card-vSCode:hover .programa-logo,
+.programa-card-figma:hover .programa-logo {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Efecto de brillo en hover */
+.programa-card-photoshop::before,
+.programa-card-illustrator::before,
+.programa-card-premiere::before,
+.programa-card-afterEffects::before,
+.programa-card-vSCode::before,
+.programa-card-figma::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.programa-card-photoshop:hover::before,
+.programa-card-illustrator:hover::before,
+.programa-card-premiere:hover::before,
+.programa-card-afterEffects:hover::before,
+.programa-card-vSCode:hover::before,
+.programa-card-figma:hover::before {
+    opacity: 1;
+}
+
+/* Responsive Sobre Mí */
+@media (max-width: 768px) {
+    .sobre-mi-content {
+        flex-direction: column;
+    }
+
+    .foto-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .programas-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .programa-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .programa-nombre {
+        font-size: 1rem;
+    }
+}
