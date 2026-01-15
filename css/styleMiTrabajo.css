@@ -191,3 +191,28 @@
     height: 3px;
     background: linear-gradient(to right, var(--color-rosa), var(--color-verde));
 }
+
+/* Soporte para iframes de YouTube */
+.galeria-placeholder {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ya lo tienes, mantén este */
+    padding-bottom: 0; /* Asegurarse de que no interfiera */
+}
+
+.galeria-placeholder iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Ajustar el video normal y el iframe para que tengan el mismo comportamiento */
+.galeria-video,
+.galeria-placeholder iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
